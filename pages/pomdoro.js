@@ -3,28 +3,22 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 import styles from '../components/styles/Pomdoro.module.css';
-import PageLayout from '../components/PageLayout';
-import Container from '../components/Container';
-import Grid from '../components/Grid';
-import ImageCard from '../components/ImageCard';
-import Nav from '../components/Nav';
-import FooterNav from '../components/FooterNav';
-import Banner from '../components/Banner';
+import Canvas from '../components/Canvas';
 
-import {HeaderStyle} from '../components/styles/header.style';
-import {FooterStyle} from '../components/styles/footer.style';
 
 
 
 function Pomdoro() {
+  // var canvas = document.getElementById('canvas');
+  // var ctx = canvas.getContext('2d');
   return (
     <div>
       <Head>
         <title>Pomdoro App</title>
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
-      <PageLayout >
-        <Container className={styles.main}>
+      <div id={styles.layout} >
+        <div id={styles.main}>
           <h1 id={styles.title}>Pomdoro</h1>
           <div className={styles.states}>
             <div className={styles.statesBg}></div>
@@ -34,15 +28,15 @@ function Pomdoro() {
           </div>
 
           <div className={styles.canvasWrapper}>
-            <div id={styles.canvas}></div>
+          <Canvas />
             <div className={styles.timerWrapper}>
               <h2 id={styles.timer}>17:59</h2>
               <h3 className={styles.currentState}>PAUSE</h3>
             </div>
           </div>
-        </Container>
-        
-      </PageLayout>
+        </div>
+
+      </div>
 
       <style jsx global>{`
      @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');

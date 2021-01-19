@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image'
 import Link from 'next/link';
 
-// import styles from '../components/styles/Home.module.css';
 import PageLayout from '../components/PageLayout';
 import Container from '../components/Container';
 import Grid from '../components/Grid';

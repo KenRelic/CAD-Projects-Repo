@@ -1,12 +1,14 @@
 
-.layout{
-  
+#layout{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.main{
+#main{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   flex-direction: column;
 }
 
@@ -20,16 +22,17 @@
 }
 
 .states{
-  border-radius: 2.5em;
+  border-radius: 3em;
   border: none;
   background-color: #151932;
-  min-width: 400px;
+  min-width: 100%;
   max-width: 600px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   height: 80px;
- 
+  align-items: center;
+  margin: 1em auto;
 }
 
 .states *{
@@ -42,13 +45,20 @@
   border: none;
   color: #fff;
   outline: none;
-
+  cursor: none;
+  pointer-events: none;
 }
+
 .statesBg{
-  background-color:#f97072;
+  background-color: #f97072;
   border-radius: 2.5em;
   grid-column: 1/2;
   grid-row: 1/2;
+  height: 80%;
+  width: 90%;
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
 }
 
 .btn1{
@@ -66,6 +76,7 @@
 
 .canvasWrapper{
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -73,27 +84,42 @@
   height: 50vh;
   width: 50vh;
   border-radius: 50%;
-  margin-top: 5rem;
+  margin-top: 1.5rem;
   box-shadow: -20px -20px 90px #343a68, 20px 20px 90px #03051a;
 }
 
-.canvas{
-
+.canvasWrapper::after{
+  content: '';
+  height: 90%;
+  width: 90%;
+  background-color: #151932;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
 }
 
 .timerWrapper{
-  font-size: 3rem;
   color: #fff;
   text-align: center;
-
+  z-index: 3;
 }
 
+#canvas{
+  height: 90%;
+  width: 90%;
+  border: 15px solid #f97072;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
 .currentState{
   font-size: 1.5rem;
   text-align: center;
   letter-spacing: 5px;
+  margin-top:-3rem;
 }
 
 #timer{
   font-size: 7rem;
+  line-height: .3;
 }
