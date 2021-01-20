@@ -3,7 +3,7 @@ export default async function getUserDataByIP(ip, currentData, setIsLoaded, setF
   try {
     const res = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=3b1508839e804a029b3a17b43fd96bf4&ip=${ip}`)
     const data = await res.json();
-    console.log(data);
+  
     // const data =  {
     //   "ip": "33.33.33.33", 
     // "location": { 
@@ -40,7 +40,7 @@ export default async function getUserDataByIP(ip, currentData, setIsLoaded, setF
     if (!data.message && data) {
       setIsLoaded(true);
       setFetchError(false);
-      console.log(data)
+      console.log(data,   (data.time_zone.offset || 'not here'))
       return data;
     } else {
       setFetchError(true);
