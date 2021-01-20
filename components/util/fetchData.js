@@ -37,7 +37,7 @@ export default async function getUserDataByIP(ip, currentData, setIsLoaded, setF
     //   } 
     // }
 
-    if (!data.message && data !== undefined) {
+    if (!data.message && data) {
       setIsLoaded(true);
       setFetchError(false);
       console.log(data)

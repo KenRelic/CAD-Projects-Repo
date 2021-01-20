@@ -33,7 +33,7 @@ class Map extends Component {
     else {
       return (
       <StyledMapLayout>
-          <div>Hello</div>
+          {/* <div>Hello</div> */}
        </StyledMapLayout>
        )
     }
