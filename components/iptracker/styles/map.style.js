@@ -6,7 +6,7 @@ export const StyledMapLayout = styled('div')`
   padding: 0;
   box-sizing: border-box;
   margin:0; 
-  background-color: blue;
+  background-color: #fff;
   display:flex;
   align-items:center;
   justify-content:center;

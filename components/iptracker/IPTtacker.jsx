@@ -16,7 +16,7 @@ export default function IPTracker(props){
       setIsLoaded = {props.setIsLoaded} 
       hasFetchError = {props.hasFetchError}
       setHasFetchError={props.setHasFetchError}  />
-     {props.isMounted && <Map />   }   
+     {props.isLoaded && <Map />}
     </StyledLayout>
   )
 }

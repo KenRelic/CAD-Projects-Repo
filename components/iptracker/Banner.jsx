@@ -8,7 +8,7 @@ import fetchData from '../util/fetchData';
 
 export default function Banner(props){
   const [errorMessage, setErrorMessage] = useState(['404','IP Not Found'])
-  // console.log(props);  
+  // console.log(props.data.time_zone.offset || 'not here');  
   return (
     <StyledBanner>
       <div className="container">
@@ -34,13 +34,13 @@ export default function Banner(props){
             <div className="separator"></div>
             <div className="criteria">
               <h2 className="sub-title">LOCATION</h2>
-              <p className="result-value">{ props.isLoaded? (props.data.district + ' ' + props.data.state_prov + ', ' + props.data.country_name):
+              <p className="result-value">{ props.isLoaded ? (props.data.district + ' ' + props.data.state_prov + ', ' + props.data.country_name):
               props.data.location.city +', '+ props.data.location.region + ', ' + props.data.location.country}</p>
             </div>
             <div className="separator"></div>
             <div className="criteria">
               <h2 className="sub-title">TIMEZONE</h2>
-              <p className="result-value">{props.isLoaded? props.data.time_zone.offset : props.data.location.timezone}</p>
+              <p className="result-value">{props.isLoaded ? `${+props.data.time_zone.offset}:00`: props.data.location.timezone}</p>
             </div>
             <div className="separator"></div>
             <div className="criteria">
