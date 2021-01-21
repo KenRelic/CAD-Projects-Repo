@@ -40,7 +40,7 @@ export default function Banner(props){
             <div className="separator"></div>
             <div className="criteria">
               <h2 className="sub-title">TIMEZONE</h2>
-              <p className="result-value">{props.isLoaded ? `${+props.data.time_zone.offset}:00`: props.data.location.timezone}</p>
+              {/* <p className="result-value">{props.isLoaded ? `${+props.data.time_zone.offset}:00`: props.data.location.timezone}</p> */}
             </div>
             <div className="separator"></div>
             <div className="criteria">
